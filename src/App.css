@@ -1,0 +1,11 @@
+
+
+body{
+ background-color: rgb(224, 238, 238);
+ background-repeat: no-repeat;  
+ color: rgb(19, 26, 32);
+}
+.form-control{
+    background-color: rgba(41, 241, 181, 0.918);
+    color: rgb(40, 41, 42);
+}

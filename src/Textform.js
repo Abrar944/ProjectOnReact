@@ -49,19 +49,21 @@ export default function Textform(promps) {
 <h1>{promps.heading}</h1>
 <div className="mb-3">
 <textarea className="form-control" value={text} onChange={handlechange} id="mybox" rows="8"  ></textarea><br />
-<button type="button" className="btn btn-primary mx-2" onClick={handleupclick}> Convert to Upper case</button>
-<button type="button" className="btn btn-primary mx-2" onClick={handletoclick}> Convert to Upper case</button>
-<button type="button" className="btn btn-primary mx-2" onClick={handleclrclick}> Clear text</button>
-<button type="button" className="btn btn-primary mx-2" onClick={handlecopclick}> Copy text</button>
+<button type="button" className="btn btn-primary mx-2 my-2 " onClick={handleupclick}> Convert to Upper case</button>
+<button type="button" className="btn btn-primary mx-2 my-2 " onClick={handletoclick}> Convert to Upper case</button>
+<button type="button" className="btn btn-primary mx-2 my-2 " onClick={handleclrclick}> Clear text</button>
+<button type="button" className="btn btn-primary mx-2 my-2 " onClick={handlecopclick}> Copy text</button>
 
 </div>
-<div className="container" my-3>
+<div className="container" my-3>   
     <h1>Your Summary</h1>
-    <p>{text.split(" ").length}word and {text.length} characters</p>
+    <p>{text.split(" ").filter((element)=>{
+        return element.length!==0
+    }).length}word and {text.length} characters</p>
     <p>{0.008 * text.split(" ").length} Minutes To read</p>
     <h2>Preview </h2>
     <p>{text}</p>
 </div>
-        </div>
+        </div>            
     )
 }

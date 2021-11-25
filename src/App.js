@@ -18,14 +18,27 @@ const Showalert=(message, type)=> {
 
 const [mode, setMode] = useState('dark')
 
-  const toggleMode = (props) => {
-if (mode =='light') {
+const removecolor =()=>{
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-danger');
+}
+
+  const toggleMode = (cls) => {
+      removecolor();
+      document.body.classList.add('bg-' +cls)
+if (mode ==='light') {
     setMode('dark');
-    document.body.style.backgroundColor='CadetBlue';
+    document.body.style.backgroundColor='#042743';
+    document.body.style.color = 'white';
     Showalert("Dark Mode is Enable","Success")
 }
 else{
     setMode('light');
+    document.body.style.color = 'black';
     document.body.style.backgroundColor='White';
     Showalert("Light Mode is Enable","Success")
 }

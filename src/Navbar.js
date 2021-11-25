@@ -1,12 +1,10 @@
-import React,{useState} from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-duplicate-props */
+// import React,{useState} from 'react'
 
 
 export default function Navbar(props) {
-  let myStyle ={
-    color: props.mode ==='dark'?'white':'black',
-    // backgroundColor: props.mode ==='dark'?'black':'black'
-
-  }
+  
    return (
       <>
       
@@ -17,7 +15,7 @@ export default function Navbar(props) {
       <span className="navbar-toggler-icon"></span>
     </button> */}
 
-    <div className="collapse navbar-collapse" id="navbarNav">   
+    {/* <div className="collapse navbar-collapse" id="navbarNav">   
       <ul className="navbar-nav">
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="#">Home</a>
@@ -33,8 +31,19 @@ export default function Navbar(props) {
         </li>
         </ul>
         </div>
-        <div class="form-check form-switch text-{mode}" style = {myStyle} >
-  <input  onClick = 'toggle' class="form-check-input" onClick={props.toggleMode}  type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+         */}
+         <div className="d-flex">
+         <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height:'30px'
+        ,width:'30px', cursor: 'pointer'}}></div>
+          <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('danger')}} style={{height:'30px'
+        ,width:'30px', cursor: 'pointer'}}></div>
+         <div className="bg-success mx-2" onClick={()=>{props.toggleMode('success')}} style={{height:'30px'
+        ,width:'30px', cursor: 'pointer'}}></div>
+        <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleMode('warning')}} style={{height:'30px'
+        ,width:'30px', cursor: 'pointer'}}></div>
+</div>
+                   <div class="form-check form-switch text-{mode}"  >
+  <input  onClick = 'toggle' class="form-check-input" onClick={()=>{props.toggleMode('null')}}  type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
   <label class="form-check-label" for="flexSwitchCheckDefault">Enbale LightMode</label>
 </div>
 {/* <button type="button" className="btn btn-primary mx-2" onClick={togglemode} > Copy text</button> */}

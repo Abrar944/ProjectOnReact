@@ -72,7 +72,7 @@ export default function Textform(promps) {
     }).length}word and {text.length} characters</p>
     <p>{0.008 * text.split(" ").length} Minutes To read</p>
     <h2>Preview </h2>
-    <p>{text}</p>
+    <p>{text}</p> 
 </div>
         </div>            
     )

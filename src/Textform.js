@@ -19,7 +19,7 @@ export default function Textform(promps) {
     }
     // Change to lowercase function
     const handletoclick = ()=>{
-        // console.log("Upper case" + text);
+        // console.log("Lower case" + text);
      let next = text.toLowerCase();
         setText(next);
         

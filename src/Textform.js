@@ -46,6 +46,7 @@ export default function Textform(promps) {
     const handlechange = (event)=>{
         setText(event.target.value)
     }
+    //for extra space logic
     const handleremoclick =()=>{
         let next = text.trim().split(/ +/).join(' ');
         setText(next);
@@ -59,7 +60,7 @@ export default function Textform(promps) {
 <div className="mb-3">
 <textarea className="form-control" value={text} onChange={handlechange} id="mybox" rows="8"  ></textarea><br />
 <button  disabled = {text.length  === 0} type="button" className="btn btn-primary mx-2 my-2 " onClick={handleupclick} style = {myStyle}> Convert to Upper case</button>
-<button  disabled = {text.length === 0}    type="button" className="btn btn-primary mx-2 my-2 " onClick={handletoclick}style = {myStyle}> Convert to Upper case</button>
+<button  disabled = {text.length === 0}    type="button" className="btn btn-primary mx-2 my-2 " onClick={handletoclick}style = {myStyle}> Convert to Lower case</button>
 <button  disabled = {text.length === 0}   type="button" className="btn btn-primary mx-2 my-2 " onClick={handleclrclick}style = {myStyle}> Clear text</button>
 <button disabled = {text.length === 0}   type="button" className="btn btn-primary mx-2 my-2 " onClick={handlecopclick}style = {myStyle}> Copy text</button>
 <button disabled = {text.length === 0}   type="button" className="btn btn-primary mx-2 my-2 "    onClick={handleremoclick}style = {myStyle} > Remove ExtraSpace</button>

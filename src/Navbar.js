@@ -44,7 +44,7 @@ export default function Navbar(props) {
 </div>
                    <div class="form-check form-switch text-{mode}"  >
   <input  onClick = 'toggle' class="form-check-input" onClick={()=>{props.toggleMode('null')}}  type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label class="form-check-label" for="flexSwitchCheckDefault">Enbale LightMode</label>
+  <label class="form-check-label" for="flexSwitchCheckDefault">Enbale ThemeMode</label>
 </div>
 {/* <button type="button" className="btn btn-primary mx-2" onClick={togglemode} > Copy text</button> */}
 

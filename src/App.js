@@ -16,7 +16,7 @@ const Showalert=(message, type)=> {
     })
 }
 
-const [mode, setMode] = useState('dark')
+const [mode, setMode] = useState('light')
 
 const removecolor =()=>{
     document.body.classList.remove('bg-light');
